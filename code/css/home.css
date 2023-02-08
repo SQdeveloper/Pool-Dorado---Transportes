@@ -1,7 +1,13 @@
+/************** General ***************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 :root {
@@ -13,6 +19,8 @@ body {
     background-color: var(--color-black);
 }
 
+
+/*********** Header ************/
 header {    
     display: flex;
     align-items: center;
@@ -40,13 +48,16 @@ li {
     transition: .4s color;
 }
 
-li:hover {
+li a:hover {
     color: var(--color-primary);
+    background-color: transparent;
 }
 
 li img {
     width: 270px;
 }
+
+/*************** Home ***************/
 
 .home {
     height: 100vh;
@@ -438,6 +449,10 @@ a:hover {
     font-size: 20px;
 }
 
+.message a:hover {
+    background-color: #8f6516;
+}
+
 .container-message {
     position: relative;
     display: flex;
@@ -504,6 +519,10 @@ footer .info {
     display: flex;
     align-items: center;
     margin-left: -4px;
+}
+
+.info-block li a {
+    background-color: transparent;
 }
 
 .info-block li img {
