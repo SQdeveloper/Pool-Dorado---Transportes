@@ -1,0 +1,255 @@
+/********** General *************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+:root {
+    --color-primary: #c78f27;
+    --color-black: #18191A;
+}
+
+main {
+    background-color: var(--color-black);
+}
+
+/********** Header **************/
+header {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85px;
+    background-color: var(--color-black);
+    padding: 0 130px;
+    font-family: 'Kanit', sans-serif;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 18px;
+    transition: .4s color;
+}
+
+li:hover {
+    color: var(--color-primary);
+}
+
+li img {
+    width: 270px;
+}
+
+/*********** bg *************/
+
+.bg {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background-color: var(--color-black);
+    justify-content: center;
+}
+
+.bg img {
+    width: 98.3%;
+    height: 450px;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.bg svg {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    transform: scale(2);
+    bottom: -3px;
+    left: 0;
+}
+
+.bg h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+/*************** about ****************/
+
+.about {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 90px 0 110px;
+    background-color: var(--color-black);
+    color: white;
+}
+
+.about hr {
+    width: 50px;
+    border: none;
+    border-bottom: 3px solid red;
+}
+
+.about div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about img {
+    border-radius: 10px;
+}
+
+.about h2 {
+    font-size: 30px;
+}
+
+.about span {
+    font-weight: lighter;
+    padding-right: 10px;
+}
+
+/******* section message******/
+.message {
+    width: 100%;
+    height: 130px;
+    background: linear-gradient( var(--color-black) 50%, #1e1f20 50%);
+}
+
+.message a {
+    color: white;
+    text-decoration: none;
+    background-color: var(--color-primary);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-message {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    margin: auto;
+    border-radius: 20px;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-black);
+    box-shadow: 0px 0px 10px 0 black;
+    color: white;
+}
+
+.container-message div {
+    line-height: 33px;
+}
+
+.container-message h2 {
+    font-size: 30px;
+}
+
+.container-message h3 {
+    font-weight: lighter;
+}
+
+/****************** Footter *******************/
+footer {
+    padding: 0 10%;
+    padding-bottom: 30px;
+    padding-top: 80px;
+    color: white;
+    background-color: #1e1f20;
+}
+
+footer .info {
+    display: flex;
+    gap: 90px;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+}
+
+.info-block p {
+    width: 300px;
+    padding-top: 12px;
+}
+
+.info-block .logo {
+    width: 300px;
+    height: 70px;
+}
+
+.info-block h3 {
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.info-block li{
+    display: flex;
+    align-items: center;
+    margin-left: -4px;
+}
+
+.info-block li img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%);
+}
+
+.info-block div img {
+    width: 25px;
+    height: 25px;
+    filter: invert(53%) sepia(88%) saturate(402%) hue-rotate(0deg) brightness(94%) contrast(87%);
+}
+
+.info-block div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+footer .logo-camion {
+    width: 180px;
+}
+
+footer .right {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+footer img {
+    width: 200px;
+}
+
+footer .right div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
