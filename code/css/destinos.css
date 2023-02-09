@@ -100,41 +100,41 @@ li img {
     letter-spacing: 3px;
 }
 
-/*************** about ****************/
+/*************** Places ****************/
 
-.about {
+.places {
     display: flex;
-    gap: 30px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 90px 0 110px   ;
-    background-color: var(--color-black);
+    flex-direction: column;
+    gap: 60px;
     color: white;
+    font-weight: lighter;
+    letter-spacing: 2.5px;
+    font-size: 20px;
+    padding: 50px 0 100px;
+    background-color: var(--color-black);
 }
 
-.about hr {
-    width: 50px;
-    border: none;
-    border-bottom: 3px solid red;
-}
-
-.about div {
+.places .place-cont {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
-.about img {
-    border-radius: 10px;
+.places .cont-img {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
 }
 
-.about h2 {
-    font-size: 30px;
-}
-
-.about span {
-    font-weight: lighter;
-    padding-right: 10px;
+.places img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius:8px;
 }
 
 /******* section message******/

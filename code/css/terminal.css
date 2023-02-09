@@ -100,41 +100,83 @@ li img {
     letter-spacing: 3px;
 }
 
-/*************** about ****************/
+/************** Terminales **************/
 
-.about {
-    display: flex;
-    gap: 30px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 90px 0 110px   ;
-    background-color: var(--color-black);
-    color: white;
-}
-
-.about hr {
-    width: 50px;
-    border: none;
-    border-bottom: 3px solid red;
-}
-
-.about div {
+.terminales {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 60px;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 50px 0 90px;
 }
 
-.about img {
-    border-radius: 10px;
+.cont-terminales {
+    display: flex;
+    text-align: start;
+    gap: 25px;
+    flex-direction: column;
 }
 
-.about h2 {
+.cont-terminales h2 {
+    font-weight: lighter;
     font-size: 30px;
 }
 
-.about span {
-    font-weight: lighter;
-    padding-right: 10px;
+.cont-terminales span {
+    font-size: 30.5px;
+    font-weight: bold;
+}
+
+.cont-terminales hr {
+    border: none;
+    border-top: 3px solid red;
+    width: 60px;
+}
+
+.cont-ubication {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 30px;
+}
+
+.cont-ubication .ubication {
+    width: 330px;
+    min-height: 360px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    border: 1px solid gray;
+}
+
+.ubication iframe {
+    height: 70%;
+    width: 100%;
+}
+
+.cont-ubication .cont-text {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    padding: 0 20px;
+}
+
+.cont-ubication .cont-text div {
+    display: flex;
+    gap: 10px;
+}
+
+.cont-ubication .cont-text img {
+    width: 20px;
+    height: 20px;
+    filter: invert(53%) sepia(88%) saturate(402%) hue-rotate(0deg) brightness(94%) contrast(87%);
+    
 }
 
 /******* section message******/

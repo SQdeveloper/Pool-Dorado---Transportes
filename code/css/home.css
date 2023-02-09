@@ -49,7 +49,7 @@ li {
 }
 
 li a:hover {
-    color: var(--color-primary);
+    color: red;
     background-color: transparent;
 }
 
