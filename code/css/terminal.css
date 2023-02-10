@@ -1,4 +1,9 @@
 /********** General *************/
+@font-face {
+    font-family: 'm';
+    src: url('/rg/font/m/Kanit-Medium.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'm';
 }
 
 :root {
@@ -52,8 +57,10 @@ li {
 }
 
 li a:hover {
-    color: red;
+    color: var(--color-primary);
 }
+
+.select { color: red }
 
 li:hover {
     color: var(--color-primary);

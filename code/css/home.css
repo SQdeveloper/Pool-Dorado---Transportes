@@ -48,8 +48,10 @@ li {
     transition: .4s color;
 }
 
+.select { color: red }
+
 li a:hover {
-    color: red;
+    color: var(--color-primary);
     background-color: transparent;
 }
 
@@ -523,6 +525,10 @@ footer .info {
 
 .info-block li a {
     background-color: transparent;
+}
+
+.info-block li a:hover {
+    color: var(--color-primary);
 }
 
 .info-block li img {

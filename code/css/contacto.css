@@ -70,78 +70,143 @@ li img {
     width: 270px;
 }
 
-/*********** bg *************/
+/************** Section Form **************/
 
-.bg {
-    position: relative;
-    overflow: hidden;
+section.form {
     display: flex;
     background-color: var(--color-black);
+    color: white;
+    gap: 20px;
     justify-content: center;
+    padding: 90px 0;
 }
 
-.bg img {
-    width: 98.3%;
-    height: 420px;
-    object-fit: cover;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-.bg svg {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    transform: scale(2);
-    bottom: -3px;
-    left: 0;
-}
-
-.bg h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    letter-spacing: 3px;
-}
-
-/*************** Places ****************/
-
-.places {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    color: white;
+section.form h2 {
+    font-size: 35px;
     font-weight: lighter;
-    letter-spacing: 2.5px;
-    font-size: 20px;
-    padding: 50px 0 100px;
-    background-color: var(--color-black);
 }
 
-.places .place-cont {
+section.form h3 {
+    font-weight: lighter;
+}
+
+.form .info {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
-    width: 80%;
-    margin: auto;
+    width: 35%;
 }
 
-.places .cont-img {
+.form .info div {
     display: flex;
-    gap: 28px;
-    justify-content: center;
+    gap: 10px;
     align-items: center;
 }
 
-.places img {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius:8px;
+.form .info img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%)
+}
+
+.form-f {
+    width: 35%;
+}
+
+.form-f img {
+    width: 34px;
+    height: 34px;
+    padding-bottom: 13px;
+}
+
+img.last {
+    filter: brightness(100);
+}
+
+.set-input {
+    display: flex;
+    align-items: end;
+}
+
+/******* input *******/
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form__field {
+font-family: inherit;
+width: 100%;
+border: none;
+border-bottom: 2px solid #e4dede;
+outline: 0;
+font-size: 17px;
+color: #fff;
+padding: 7px 0;
+background: transparent;
+transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+font-size: 17px;
+cursor: text;
+top: 20px;
+}
+
+.form__label {
+position: absolute;
+top: 0;
+display: block;
+transition: 0.2s;
+font-size: 17px;
+color: #fff;
+pointer-events: none;
+}
+
+.form__field:focus {
+padding-bottom: 6px;
+font-weight: 700;
+border-width: 3px;
+border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+position: absolute;
+top: 0;
+display: block;
+transition: 0.2s;
+font-size: 17px;
+font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+box-shadow: none;
+}
+
+button {
+    background-color: #ff2e33;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color .6s;
+}
+
+button:hover {
+    background-color: #9c2f39;
 }
 
 /******* section message******/
