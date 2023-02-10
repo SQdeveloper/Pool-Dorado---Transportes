@@ -108,41 +108,92 @@ li img {
     font-weight: lighter;
 }
 
-/*************** Places ****************/
+/************ Politicas *************/
 
-.places {
+.politicas {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 30px;
     color: white;
-    font-weight: lighter;
-    letter-spacing: 2.5px;
-    font-size: 20px;
-    padding: 50px 0 100px;
-    background-color: var(--color-black);
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    padding-top: 70px;
 }
 
-.places .place-cont {
+.politicas hr {
+    border: none;
+    border-top: 3px solid red;
+    width: 50px;
+}
+
+.politicas button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.politicas h2 {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.politicas button img {
+    filter: invert(100%);
+    height: 20px;
+}
+
+.politicas .lista {
+    width: 1000px;
+    max-height: 0;
+    z-index: -1;
+}
+
+.politicas .lista.active {
+    max-height: 200px;
+    z-index: 1;
+}
+
+.politicas ol {
+    padding-left: 70px;
+}
+
+.politicas li {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.politicas li:hover {
+    cursor: auto;
+    color: white;
+}
+
+.politicas span {
+    padding-left: 20px;
+}
+
+.sub-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 80%;
-    margin: auto;
+    gap: 30px;
+    width: 100%;
 }
 
-.places .cont-img {
-    display: flex;
-    gap: 28px;
-    justify-content: center;
-    align-items: center;
-}
-
-.places img {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius:8px;
+.details img {
+    width: 30px;
+    height: 30px;
 }
 
 /******* section message******/
@@ -150,6 +201,7 @@ li img {
     width: 100%;
     height: 130px;
     background: linear-gradient( var(--color-black) 50%, #1e1f20 50%);
+    margin-top: 90px;
 }
 
 .message a {
