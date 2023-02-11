@@ -28,8 +28,12 @@ header {
     width: 100%;
     height: 85px;
     background-color: var(--color-black);
-    padding: 0 130px;
+    padding: 0 80px;
     font-family: 'Kanit', sans-serif;
+}
+
+.responsive {
+    display: none;
 }
 
 ul {
@@ -193,16 +197,6 @@ li img {
     background-color: var(--color-primary);
 }
 
-.search {
-    position: relative;
-    border-radius: 10px;
-    width: 80%;
-    height: 100px;
-    margin: 0 auto;
-    margin-top: -6%;
-    background-color: black;
-}
-
 .sliderPromo {
     display: flex;
     justify-content: center;
@@ -225,9 +219,108 @@ li img {
     font-weight: bold;
 }
 
+/********** Search ************/
+.search {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    width: 90%;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: -6%;
+    background-color: #242526;
+    transition:  width .3s;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: white;
+}
+
+.search.active {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.search .content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search .content.active {
+    width: 90%;
+}
+
+.search div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+}
+
+.search .box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    width: 20px;
+    padding: 8px
+}
+
+.search select {
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+    color: white;
+    max-width: 100%;
+    text-overflow: ellipsis;
+}
+
+.search option {
+    color: black;
+    font-size: 16px;
+}
+
+.search option:active {
+    background-color: #72acff;
+}
+
+.search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    filter: invert(100% );
+    font-weight: bolder;
+}
+
+.search button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #ff2e33;
+    color: white;
+    font-size: 17px;
+    flex: 1;
+    cursor: pointer;
+    border:none;
+}
+
+.search button:hover {
+    background-color: #9C2F39;
+}
+
 /************** Slider automatico *********************/
 .slider {
-    width: 85%;
+    width: 95%;
     height: 270px;
     position: relative;
 }
@@ -377,7 +470,6 @@ li img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     color: white;    
     padding: 80px 0;
 }
@@ -568,4 +660,126 @@ footer .right div {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/*************** Media Querys *******************/
+
+@media (max-width: 1200px) {
+    /*********** Header ***********/
+    header li img {
+        width: 200px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .responsive {
+        display: flex;
+    }
+
+    /************ Home ************/
+    .slider-card {
+        gap: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    /************ Home ************/
+    .home .cards {
+        display: none;
+    }
+
+    .home .text {
+        width: 600px;
+        padding-bottom: 180px;
+    }
+
+    .home {
+        height: 85vh;
+    }
+
+    /*********** Search ***********/
+    .search {
+        margin-top: -10%;
+    }
+
+    /********** Slider Promo **********/
+    .cardA {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cardA img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .cardA div img {
+        width: 120px;
+    }
+
+    .cardA div {
+        padding-top: 25px;
+    }
+
+    .slider {
+        height: 490px;
+        width: 85%;
+    }
+
+    /************ Bus *************/
+    .bus {
+        height: 300px;
+    }
+
+    /************ Contact ***********/
+
+    .contact {
+        width: 70%;
+        margin: auto;
+        align-items: start;
+    }
+
+    .contact h2:first-child {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact .infos {
+        flex-direction: column;
+    }
+
+    /********** Footer ***********/
+    footer {
+        padding: 80px 12%;
+    }
+
+    footer .info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-block p {
+        width: 100%;
+    }
+}
+
+@media (max-width:850px){
+    /********* Search *********/
+    .search {
+        height: auto;
+    }
+
+    .search button {
+        padding: 20px;
+    }
+
+    .search .content {
+        flex-direction: column;
+    }
+
+    .search .box {
+        width: 100%;
+    }
 }

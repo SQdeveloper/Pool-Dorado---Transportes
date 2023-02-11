@@ -128,6 +128,10 @@ img.last {
     align-items: end;
 }
 
+.set-input input:focus {
+    font-weight: lighter;
+}
+
 /******* input *******/
 
 .form__group {
