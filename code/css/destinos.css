@@ -36,8 +36,12 @@ header {
     width: 100%;
     height: 85px;
     background-color: var(--color-black);
-    padding: 0 130px;
+    padding: 0 80px;
     font-family: 'Kanit', sans-serif;
+}
+
+.responsive {
+    display: none;
 }
 
 ul {
@@ -70,6 +74,44 @@ li img {
     width: 270px;
 }
 
+/**************** Menu **************/
+.menu {
+    display: none;
+    position: absolute;
+    top: 85px;
+    width: 80%;
+    background-color: black;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu.active {
+    display: blocK
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.menu li {
+    padding: 10px 30px;
+    border-bottom: .5px solid gray;
+    width: 100%;
+}
+
+.menu li a {
+    width: 100%;
+    display: block;
+}
+
+.menu-h img {
+    width: 30px;
+    height: 30px;
+}
+
 /*********** bg *************/
 
 .bg {
@@ -93,7 +135,7 @@ li img {
     width: 100%;
     height: 50px;
     transform: scale(2);
-    bottom: -3px;
+    bottom: -30px;
     left: 0;
 }
 
@@ -159,6 +201,7 @@ li img {
     padding: 10px 20px;
     border-radius: 25px;
     font-size: 20px;
+    text-align: center;
 }
 
 .message a:hover {
@@ -279,4 +322,138 @@ footer .right div {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/*************** Media Querys *******************/
+
+@media (max-width: 1200px) {
+    /*********** Header ***********/
+    header li img {
+        width: 200px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .responsive {
+        display: flex;
+    }
+
+    /************ Home ************/
+    .slider-card {
+        gap: 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    /********* Places ************/
+    .places img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1000px) {
+    /************ Home ************/
+    .home .cards {
+        display: none;
+    }
+
+    .home .text {
+        width: 600px;
+        padding-bottom: 180px;
+    }
+
+    .home {
+        height: 85vh;
+    }
+
+    /********** Footer ***********/
+    footer {
+        padding: 80px 12%;
+    }
+
+    footer .info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-block p {
+        width: 100%;
+    }
+
+    /********* Places ************/
+    .places img {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media (max-width:850px){
+    /*********** Footer *************/
+    footer img:nth-child(2) {
+        display: none;
+    }
+
+    /*********** Places *************/
+    .places .place-cont {
+        gap: 30px;
+    }
+
+    .places .cont-img {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .places img {
+        width: 100%;
+        height: 350px;
+        object-fit: fill;
+    }
+}
+
+@media (max-width:650px) {
+    /*********** Home ***********/
+    .home .text {
+        width: 400px;
+    }
+}
+@media (max-width:600px) {
+    /********** Header **********/
+    header {
+        padding: 0 40px;
+    }
+
+    /********** Menu ************/
+    .menu {
+        width: 100%;
+    }
+
+    /*********** Message ************/
+    .message {
+        height: 200px;
+    }
+    .container-message {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 35px;
+    }
+
+    .message a {
+        width: 220px;
+    }
+
+    /*********** Places *************/
+    .places img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px ){
+    /********* Home **********/
+    .home .text {
+        width: 300px;
+    }
+
 }

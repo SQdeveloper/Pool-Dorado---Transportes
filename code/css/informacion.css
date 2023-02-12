@@ -40,6 +40,10 @@ header {
     font-family: 'Kanit', sans-serif;
 }
 
+.responsive {
+    display: none;
+}
+
 ul {
     display: flex;
     align-items: center;
@@ -70,6 +74,44 @@ li img {
     width: 270px;
 }
 
+/**************** Menu **************/
+.menu {
+    display: none;
+    position: absolute;
+    top: 85px;
+    width: 80%;
+    background-color: black;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu.active {
+    display: blocK
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.menu li {
+    padding: 10px 30px;
+    border-bottom: .5px solid gray;
+    width: 100%;
+}
+
+.menu li a {
+    width: 100%;
+    display: block;
+}
+
+.menu-h img {
+    width: 30px;
+    height: 30px;
+}
+
 /*********** bg *************/
 
 .bg {
@@ -93,7 +135,7 @@ li img {
     width: 100%;
     height: 50px;
     transform: scale(2);
-    bottom: -3px;
+    bottom: -20px;
     left: 0;
 }
 
@@ -150,18 +192,19 @@ li img {
 }
 
 .politicas .lista {
-    width: 1000px;
+    width: 100%;
     max-height: 0;
     z-index: -1;
 }
 
 .politicas .lista.active {
-    max-height: 200px;
+    max-height: 550px;
     z-index: 1;
 }
 
 .politicas ol {
     padding-left: 70px;
+    padding-bottom: 20px;
 }
 
 .politicas li {
@@ -176,6 +219,7 @@ li img {
 
 .politicas span {
     padding-left: 20px;
+    display: block;
 }
 
 .sub-title {
@@ -331,4 +375,103 @@ footer .right div {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/*************** Media Querys *******************/
+
+@media (max-width: 1200px) {
+    /*********** Header ***********/
+    header li img {
+        width: 200px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .responsive {
+        display: flex;
+    }
+
+    /************ Home ************/
+    .slider-card {
+        gap: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    /************ Home ************/
+    .home .cards {
+        display: none;
+    }
+
+    .home .text {
+        width: 600px;
+        padding-bottom: 180px;
+    }
+
+    .home {
+        height: 85vh;
+    }
+
+    /********** Footer ***********/
+    footer {
+        padding: 80px 12%;
+    }
+
+    footer .info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-block p {
+        width: 100%;
+    }
+}
+
+@media (max-width:850px){
+    /*********** Footer *************/
+    footer img:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width:650px) {
+    /*********** Home ***********/
+    .home .text {
+        width: 400px;
+    }
+}
+@media (max-width:600px) {
+    /********** Header **********/
+    header {
+        padding: 0 40px;
+    }
+
+    /********** Menu ************/
+    .menu {
+        width: 100%;
+    }
+
+    /*********** Message ************/
+    .message {
+        height: 200px;
+    }
+    .container-message {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 35px;
+    }
+
+    .message a {
+        width: 220px;
+    }
+}
+
+@media (max-width: 480px ){
+    /********* Home **********/
+    .home .text {
+        width: 300px;
+    }
+
 }
