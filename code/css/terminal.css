@@ -1,7 +1,7 @@
 /********** General *************/
 @font-face {
     font-family: 'm';
-    src: url('/rg/font/m/Kanit-Medium.ttf');
+    src: url('../../rg/font/m/Kanit-Medium.ttf');
 }
 
 * {
