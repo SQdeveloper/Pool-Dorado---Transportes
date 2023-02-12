@@ -135,7 +135,7 @@ li img {
 .slider-card-1::before {
     position: absolute;
     content: "";
-    background: linear-gradient(rgba(0,0,0,.3) 100%, transparent), url('/rg/bg/bg-pooldorado.webp');
+    background: linear-gradient(rgba(0,0,0,.3) 100%, transparent), url('../../rg/bg/bg-pooldorado.webp');
     animation: scale 5s infinite;
     background-position: center center;
     background-size: cover;
@@ -147,7 +147,7 @@ li img {
 .slider-card-2::before {
     position: absolute;
     content: "";
-    background: linear-gradient(rgba(0,0,0,.3) 100%, transparent), url('/rg/bg/bg-pooldorado-bus.webp');
+    background: linear-gradient(rgba(0,0,0,.3) 100%, transparent), url('../../rg/bg/bg-pooldorado-bus.webp');
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -202,19 +202,19 @@ li img {
 }
 
 .card-1 {
-    background-image: url('/rg/jpg/huancayo.jpg');
+    background-image: url('../../rg/jpg/huancayo.jpg');
 }
 
 .card-2 {
-    background-image: url('/rg/jpg/jauja.jpg');
+    background-image: url('../../rg/jpg/jauja.jpg');
 }
 
 .card-3 {
-    background-image: url('/rg/jpg/pasco.jpg');
+    background-image: url('../../rg/jpg/pasco.jpg');
 }
 
 .card-4 {
-    background-image: url('/rg/jpg/lima.jpg');
+    background-image: url('../../rg/jpg/lima.jpg');
 }
 
 .card-text {
@@ -467,7 +467,7 @@ li img {
 /**********************/
 
 .bus {
-    background-image: url('/rg/web/terminales.webp');
+    background-image: url('../../rg/web/terminales.webp');
     width: 98%;
     height: 400px;
     margin: auto;
